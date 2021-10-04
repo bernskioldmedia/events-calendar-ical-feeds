@@ -11,7 +11,7 @@ We believe the use for a calendar export is to subscribe so that updates properl
 
 You can install this package via composer.
 
-```
+```bash
 composer require bernskioldmedia/events-calendar-ical-feeds
 ```
 
@@ -19,13 +19,9 @@ composer require bernskioldmedia/events-calendar-ical-feeds
 
 The feed URL is based on the events slug in the settings of The Event Calendar.
 
-For the default slug `events`, the feed URL will be:
+For the default slug `events`, the feed URL will be: `https://yourdomain.com/events/ical-feed`
 
-```
-https://yourdomain.com/events/ical-feed
-```
-
-Please note that the default feed is `/ical` while this one is at `/ical-feed`.
+_Please note that the default feed is `/ical` while this one is at `/ical-feed`._
 
 ### Query Parameters
 
@@ -77,7 +73,7 @@ We make a few filters and actions available for customizing and extending.
 
 Define how many items can be at most be included in the feed. No more items will be allowed, even if set via the filters. Defaults to `500`.
 
-```
+```php
 // Allow 1000 events to be loaded into the iCal feed.
 add_filter( 'events_calendar_ical_feeds_max_amount', function(int $max_events, \BernskioldMedia\WP\EventsCalendarIcalFeeds\Calendar_Feed $feed) {
 	return 1000;
@@ -93,7 +89,7 @@ Be mindful of this, as a larger timespan will mean a bigger feed, which has perf
 
 Return any valuable compatible with `DateTime`.
 
-```
+```php
 // Including events starting 45 days from any given day.
 add_filter( 'events_calendar_ical_feeds_default_start_date', function( string $start_date ) {
 	return '-45 days';
@@ -109,7 +105,7 @@ Be mindful of this, as a larger timespan will mean a bigger feed, which has perf
 
 Return any valuable compatible with `DateTime`.
 
-```
+```php
 // Including events rolling one year from today.
 add_filter( 'events_calendar_ical_feeds_default_end_date', function( string $end_date ) {
 	return '+1 year';
@@ -124,7 +120,7 @@ Please note that returning `/ical` here will clash with the built-in feed in The
 
 _After changing, don't forget to refresh your permalinks._
 
-```
+```php
 // Making the URL /events/subscribe.
 add_filter( 'events_calendar_ical_feeds_feed_slug', function() {
 	return 'subscribe';
