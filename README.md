@@ -1,6 +1,6 @@
 # iCalendar Feeds for The Events Calendar
 
-![License](https://img.shields.io/github/license/bernskioldmedia/events-calendar-ical-feeds) ![Downloads](https://img.shields.io/github/downloads/:bernskioldmedia/:events-calendar-ical-feeds/total)
+![License](https://img.shields.io/github/license/bernskioldmedia/events-calendar-ical-feeds) ![Downloads](https://img.shields.io/github/downloads/bernskioldmedia/events-calendar-ical-feeds/total)
 
 Extends The Events Calendar with iCal feeds that users can subscribe to in their favorite calendar application. By default, in The Events Calendar, users can export an iCalendar
 feed, but not subscribe to it.
