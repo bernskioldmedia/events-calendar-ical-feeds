@@ -1,0 +1,45 @@
+{
+  "name": "bernskioldmedia/events-calendar-ical-feeds",
+  "description": "Extends The Events Calendar with iCal feeds that users can subscribe to in their favorite calendar application.",
+  "type": "wordpress-plugin",
+  "config": {
+    "sort-packages": true
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.4|^8.0",
+    "bernskioldmedia/wp-plugin-base": "^2.3.0",
+    "composer/installers": "~1.0",
+    "spatie/icalendar-generator": "^2.3"
+  },
+  "require-dev": {
+    "bernskioldmedia/phpcs-wordpress": "dev-master"
+  },
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Bernskiold Media",
+      "email": "info@bernskioldmedia.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "BernskioldMedia\\WP\\EventsCalendarIcalFeeds\\": "src/"
+    },
+    "classmap": [
+      "vendor_prefixed/"
+    ]
+  },
+  "scripts": {
+    "build": [
+      "composer prefix-dependencies",
+      "composer dump-autoload"
+    ],
+    "prefix-dependencies": [
+      "composer require humbug/php-scoper:dev-master --dev -W",
+      "php ./vendor/humbug/php-scoper/bin/php-scoper add-prefix --prefix=ECIF_Vendor --config config/php-scoper/bm-wp-plugin-base.php --output-dir vendor_prefixed/bernskioldmedia/wp-plugin-base --force",
+      "composer remove humbug/php-scoper --dev"
+    ]
+  }
+}
