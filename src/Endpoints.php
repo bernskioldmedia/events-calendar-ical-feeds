@@ -14,6 +14,7 @@ class Endpoints implements Hookable {
 	}
 
 	public static function rules(): void {
+		global $wp_rewrite;
 		$slug      = tribe_get_option( 'eventsSlug' );
 		$feed_slug = apply_filters( 'events_calendar_ical_feeds_feed_slug', 'ical-feed' );
 
@@ -21,7 +22,7 @@ class Endpoints implements Hookable {
 			$slug = 'calendar';
 		}
 
-		add_rewrite_rule( $slug . '/' . $feed_slug . '[/]?$', 'index.php?calendar_feed', 'bottom' );
+		add_rewrite_rule( '^' . $slug . '/' . $feed_slug . '[/]?$', 'index.php?calendar_feed', 'top' );
 	}
 
 	public static function query_vars( array $query_vars ): array {
@@ -31,7 +32,7 @@ class Endpoints implements Hookable {
 	}
 
 	public static function router( string $template ): string {
-		if ( get_query_var( 'calendar_feed' ) !== false || get_query_var( 'calendar_feed' ) !== '' ) {
+		if ( get_query_var( 'calendar_feed' ) !== false && get_query_var( 'calendar_feed' ) !== '' ) {
 			return Plugin::get_path( 'views/ical-feed.php' );
 		}
 
