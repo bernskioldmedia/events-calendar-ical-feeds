@@ -22,7 +22,7 @@ class Endpoints implements Hookable {
 			$slug = 'calendar';
 		}
 
-		add_rewrite_rule( '^' . $slug . '/' . $feed_slug . '[/]?$', 'index.php?calendar_feed', 'top' );
+		add_rewrite_rule( '^' . $slug . '/' . $feed_slug . '[/]?$', 'index.php?calendar_feed=true', 'top' );
 	}
 
 	public static function query_vars( array $query_vars ): array {
@@ -32,7 +32,7 @@ class Endpoints implements Hookable {
 	}
 
 	public static function router( string $template ): string {
-		if ( get_query_var( 'calendar_feed' ) !== false && get_query_var( 'calendar_feed' ) !== '' ) {
+		if ( get_query_var( 'calendar_feed' ) === 'true' ) {
 			return Plugin::get_path( 'views/ical-feed.php' );
 		}
 
