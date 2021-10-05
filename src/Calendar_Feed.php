@@ -169,6 +169,7 @@ class Calendar_Feed {
 		}
 
 		if ( $venue ) {
+			$event->address( tribe_get_venue_single_line_address( $event_id, false ) );
 			$event->addressName( $venue );
 		}
 
