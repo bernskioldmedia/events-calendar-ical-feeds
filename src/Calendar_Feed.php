@@ -129,6 +129,8 @@ class Calendar_Feed {
 		if ( $this->organizer_id ) {
 			$filters['organizer'] = $this->organizer_id;
 		}
+		
+		$filters['posts_per_page'] = $this->amount;
 
 		return $filters;
 	}
