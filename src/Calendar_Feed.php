@@ -39,6 +39,15 @@ class Calendar_Feed {
 			$calendar->event( self::event_from_id( $post_id ) );
 		}
 
+		/**
+		 * Allow folks to modify the iCal Calendar object before it's returned.
+		 *
+		 * @since 1.0.1
+		 *
+		 * @param Spatie\IcalendarGenerator\Components\Calendar $calendar The iCal Calendar object that can be modified (passed by reference).
+		 */
+		do_action_ref_array( 'events_calendar_ical_create_calendar', array( &$calendar ) );
+
 		return $calendar->get();
 	}
 
@@ -178,6 +187,16 @@ class Calendar_Feed {
 		if ( tribe_event_is_all_day( $event_id ) ) {
 			$event->fullDay();
 		}
+
+		/**
+		 * Allow folks to modify the event output to add extra parameters.
+		 *
+		 * @since 1.0.1
+		 *
+		 * @param Spatie\IcalendarGenerator\Components\Event $event    The iCal event object that can be modified (passed by reference).
+		 * @param int                                        $event_id The ID of the event we're working with.
+		 */
+		do_action_ref_array( 'events_calendar_ical_event_from_id', array( &$event, $event_id ) );
 
 		return $event;
 	}
