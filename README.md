@@ -133,9 +133,8 @@ You can customize the calendar feed before output if you want to add/change/remo
 
 ```php
 // Customize the calendar feed.
-add_filter( 'events_calendar_ical_create_calendar', function( \Spatie\IcalendarGenerator\Components\Calendar $calendar ) {
+add_action( 'events_calendar_ical_create_calendar', function( \Spatie\IcalendarGenerator\Components\Calendar $calendar ) {
 	// $calendar->...
-	return $calendar;
 });
 ```
 
@@ -147,9 +146,8 @@ This can be used for example to customize the data or to add additional metadata
 
 ```php
 // Customize the calendar feed.
-add_filter( 'events_calendar_ical_event_from_id', function( \Spatie\IcalendarGenerator\Components\Event $event, int $event_id ) {
+add_action( 'events_calendar_ical_event_from_id', function( \Spatie\IcalendarGenerator\Components\Event $event, int $event_id ) {
 	// $calendar->...
-	return $event;
 });
 ```
 
