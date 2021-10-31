@@ -147,7 +147,7 @@ This can be used for example to customize the data or to add additional metadata
 ```php
 // Customize the calendar feed.
 add_action( 'events_calendar_ical_event_from_id', function( \Spatie\IcalendarGenerator\Components\Event $event, int $event_id ) {
-	// $calendar->...
+	// $event->...
 });
 ```
 
