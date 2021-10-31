@@ -126,3 +126,30 @@ add_filter( 'events_calendar_ical_feeds_feed_slug', function() {
 	return 'subscribe';
 });
 ```
+
+### Customizing the calendar feed
+
+You can customize the calendar feed before output if you want to add/change/remove anything that this plugin does by default. Please see [spatie/icalendar-generator](https://github.com/spatie/icalendar-generator) for how to interact with the calendar object.
+
+```php
+// Customize the calendar feed.
+add_filter( 'events_calendar_ical_create_calendar', function( \Spatie\IcalendarGenerator\Components\Calendar $calendar ) {
+	// $calendar->...
+	return $calendar;
+});
+```
+
+### Customizing the event object
+
+You can customize the event object before it is added to the calendar feed if you want to add/change/remove anything that this plugin does by default. Please see [spatie/icalendar-generator](https://github.com/spatie/icalendar-generator) for how to interact with the event object.
+
+This can be used for example to customize the data or to add additional metadata based on the event ID.
+
+```php
+// Customize the calendar feed.
+add_filter( 'events_calendar_ical_event_from_id', function( \Spatie\IcalendarGenerator\Components\Event $event, int $event_id ) {
+	// $calendar->...
+	return $event;
+});
+```
+
