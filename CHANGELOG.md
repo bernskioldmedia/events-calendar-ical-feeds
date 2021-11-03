@@ -4,16 +4,5 @@ All notable changes to this project will be documented in this file. This projec
 
 ## [Unreleased]
 
-## [1.0.0] - YYYY-MM-DD
-
-### Added
-
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
+## [1.0.0] - 2021-11-03
+Initial version
