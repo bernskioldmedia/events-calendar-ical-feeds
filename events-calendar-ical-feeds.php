@@ -35,10 +35,12 @@ define( 'EVENTS_CALENDAR_ICAL_FEEDS_FILE_PATH', __FILE__ );
 /**
  * Initialize and boot the plugin.
  *
- * @return Plugin
+ * @return Plugin|void
  */
 function events_calendar_ical_feeds() {
-	return Plugin::instance();
+	if( class_exists('Tribe__Events__Main')){
+		return Plugin::instance();
+	}
 }
 
 events_calendar_ical_feeds();
