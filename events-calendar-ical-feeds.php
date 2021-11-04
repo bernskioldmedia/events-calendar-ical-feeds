@@ -3,7 +3,7 @@
  * Plugin Name: iCalendar Feeds for The Events Calendar
  * Plugin URI:  https://bernskioldmedia.com
  * Description: Extends The Events Calendar with iCal feeds that users can subscribe to in their favorite calendar application.
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      Bernskiold Media
  * Author URI:  https://bernskioldmedia.com
  * Text Domain: events-calendar-ical-feeds
@@ -38,7 +38,9 @@ define( 'EVENTS_CALENDAR_ICAL_FEEDS_FILE_PATH', __FILE__ );
  * @return Plugin|void
  */
 function events_calendar_ical_feeds() {
-	if( class_exists('Tribe__Events__Main')){
+	$pluginList = get_option( 'active_plugins' );
+	$plugin = 'events-calendar-pro/events-calendar-pro.php';
+	if ( in_array( $plugin , $pluginList ) ) {
 		return Plugin::instance();
 	}
 }
