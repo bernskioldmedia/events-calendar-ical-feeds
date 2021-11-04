@@ -4,5 +4,9 @@ All notable changes to this project will be documented in this file. This projec
 
 ## [Unreleased]
 
+## [1.0.1] - 2021-11-04
+### Changed
+- Changed how we check if events calendar pro is active
+
 ## [1.0.0] - 2021-11-03
 Initial version
