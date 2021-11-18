@@ -15,6 +15,11 @@ class Endpoints implements Hookable {
 
 	public static function rules(): void {
 		global $wp_rewrite;
+		
+		if( ! function_exists( 'tribe_get_option') )
+            		return;
+        
+		
 		$slug      = tribe_get_option( 'eventsSlug' );
 		$feed_slug = apply_filters( 'events_calendar_ical_feeds_feed_slug', 'ical-feed' );
 
