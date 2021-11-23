@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. This projec
 
 ## [Unreleased]
 
+### Added
+- Replacing Events Calendar Export button with a Subscribe button to give the user a link to the feed
+- Function to get the feed url
+
 ## [1.0.2] - 2021-11-18
 ### Fixed
 - Fatal error caused by not having access to tribe_get_option for example when activating an account

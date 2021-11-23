@@ -14,6 +14,8 @@ You can install this package via composer.
 ```bash
 composer require bernskioldmedia/events-calendar-ical-feeds
 ```
+### Dependencies
+The subscription UI require Alpine JS 3 to be enqueued.
 
 ## Usage
 

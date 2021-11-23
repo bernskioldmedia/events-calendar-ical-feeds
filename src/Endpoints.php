@@ -13,21 +13,22 @@ class Endpoints implements Hookable {
 		add_action( 'template_include', [ self::class, 'router' ] );
 	}
 
-	public static function rules(): void {
-		global $wp_rewrite;
-		
-		if( ! function_exists( 'tribe_get_option') )
-            		return;
-        
-		
+	protected static function get_events_slug(): string{
 		$slug      = tribe_get_option( 'eventsSlug' );
-		$feed_slug = apply_filters( 'events_calendar_ical_feeds_feed_slug', 'ical-feed' );
 
 		if ( empty( $slug ) ) {
 			$slug = 'calendar';
 		}
 
-		add_rewrite_rule( '^' . $slug . '/' . $feed_slug . '[/]?$', 'index.php?calendar_feed=true', 'top' );
+		return $slug;
+	}
+
+	protected static function get_feed_slug(): string {
+		return apply_filters( 'events_calendar_ical_feeds_feed_slug', 'ical-feed' );
+	}
+
+	public static function rules(): void {
+		add_rewrite_rule( '^' . self::get_events_slug() . '/' . self::get_feed_slug() . '[/]?$', 'index.php?calendar_feed=true', 'top' );
 	}
 
 	public static function query_vars( array $query_vars ): array {
@@ -42,6 +43,10 @@ class Endpoints implements Hookable {
 		}
 
 		return $template;
+	}
+
+	public static function get_feed_url(): string {
+		return home_url( self::get_events_slug().'/'.self::get_feed_slug() );
 	}
 
 }
