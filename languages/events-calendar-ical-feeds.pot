@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: iCalendar Feeds for The Events Calendar\n"
-"POT-Creation-Date: 2021-10-04 22:04+0200\n"
+"POT-Creation-Date: 2021-11-23 14:27+0100\n"
 "PO-Revision-Date: 2021-10-04 22:03+0200\n"
 "Last-Translator: Erik Bernskiold <erik@bernskioldmedia.com>\n"
 "Language-Team: Erik Bernskiold <erik@bernskioldmedia.com>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Poedit-WPHeader: events-calendar-ical-feeds.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
@@ -27,22 +27,30 @@ msgstr ""
 msgid "Events from %s"
 msgstr ""
 
-#: src/Calendar_Feed.php:138
+#: src/Calendar_Feed.php:147
 #, php-format
 msgctxt "VenueName in SiteName"
 msgid "%2$s in %1$s"
 msgstr ""
 
-#: src/Calendar_Feed.php:142
+#: src/Calendar_Feed.php:151
 #, php-format
 msgctxt "OrganizerName for SiteName"
 msgid "%2$s for %1$s"
 msgstr ""
 
-#: src/Calendar_Feed.php:146
+#: src/Calendar_Feed.php:155
 #, php-format
 msgctxt "CategoryName at SiteName"
 msgid "%2$s at %1$s"
+msgstr ""
+
+#: views/subscribe-button.php:11
+msgid "Subscribe to the calendar"
+msgstr ""
+
+#: views/subscribe-button.php:14
+msgid "Subscribe"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

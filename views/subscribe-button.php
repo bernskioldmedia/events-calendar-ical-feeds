@@ -8,10 +8,10 @@
 <div class="tribe-events-c-ical tribe-common-b2 tribe-common-b3--min-medium" x-data="{open:false}">
 	<button
 		class="tribe-events-c-ical__link"
-		title="<?php echo esc_html( 'Subscribe to the calendar', 'events-calendar-ical-feeds' ); ?>"
+		title="<?php echo esc_html__( 'Subscribe to the calendar', 'events-calendar-ical-feeds' ); ?>"
 		@click="open=!open"
 	>
-		<?php echo esc_html( 'Subscribe', 'events-calendar-ical-feeds' ); ?>
+		<?php echo esc_html__( 'Subscribe', 'events-calendar-ical-feeds' ); ?>
 	</button>
 
 	<div class="feed-info" x-show="open" x-transition x-cloak>
