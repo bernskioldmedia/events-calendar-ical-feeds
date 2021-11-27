@@ -9,13 +9,14 @@
   "minimum-stability": "dev",
   "require": {
     "php": "^7.4|^8.0",
-    "bernskioldmedia/wp-plugin-base": "^2.3.0",
     "composer/installers": "~1.0",
-    "spatie/icalendar-generator": "^2.3",
-    "yahnis-elsts/plugin-update-checker": "^4.11"
+    "spatie/icalendar-generator": "^2.3"
   },
   "require-dev": {
-    "bernskioldmedia/phpcs-wordpress": "dev-master"
+    "bernskioldmedia/wp-plugin-base": "^2.3.0",
+    "yahnis-elsts/plugin-update-checker": "^4.11",
+    "bernskioldmedia/phpcs-wordpress": "dev-master",
+    "humbug/php-scoper": "dev-master"
   },
   "license": "GPL-3.0+",
   "authors": [
@@ -38,9 +39,8 @@
       "composer dump-autoload"
     ],
     "prefix-dependencies": [
-      "composer require humbug/php-scoper:dev-master --dev -W",
       "php ./vendor/humbug/php-scoper/bin/php-scoper add-prefix --prefix=ECIF_Vendor --config config/php-scoper/bm-wp-plugin-base.php --output-dir vendor_prefixed/bernskioldmedia/wp-plugin-base --force",
-      "composer remove humbug/php-scoper --dev"
+      "php ./vendor/humbug/php-scoper/bin/php-scoper add-prefix --prefix=ECIF_Vendor --config config/php-scoper/update-checker.php --output-dir vendor_prefixed/yahnis-elsts/plugin-update-checker --force"
     ]
   }
 }
