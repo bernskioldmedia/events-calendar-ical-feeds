@@ -11,7 +11,8 @@
     "php": "^7.4|^8.0",
     "bernskioldmedia/wp-plugin-base": "^2.3.0",
     "composer/installers": "~1.0",
-    "spatie/icalendar-generator": "^2.3"
+    "spatie/icalendar-generator": "^2.3",
+    "yahnis-elsts/plugin-update-checker": "^4.11"
   },
   "require-dev": {
     "bernskioldmedia/phpcs-wordpress": "dev-master"
