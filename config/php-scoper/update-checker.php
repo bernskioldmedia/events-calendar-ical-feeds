@@ -5,6 +5,9 @@ declare( strict_types = 1 );
 use Isolated\Symfony\Component\Finder\Finder;
 
 return [
+	'whitelist' => [
+		'*',
+	],
 
 	/*
 	 * By default when running php-scoper add-prefix, it will prefix all relevant code found in the current working

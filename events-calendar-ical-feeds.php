@@ -46,5 +46,5 @@ events_calendar_ical_feeds();
 /**
  * Run update checker if not disabled.
  */
-$updater = \ECIF_Vendor\Puc_v4_Factory::buildUpdateChecker( 'https://github.com/bernskioldmedia/events-calendar-ical-feeds', __FILE__, 'events-calendar-ical-feeds' );
+$updater = Puc_v4_Factory::buildUpdateChecker( 'https://github.com/bernskioldmedia/events-calendar-ical-feeds', __FILE__, 'events-calendar-ical-feeds' );
 $updater->getVcsApi()->enableReleaseAssets();
