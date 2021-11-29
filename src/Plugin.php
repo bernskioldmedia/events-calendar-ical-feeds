@@ -21,19 +21,28 @@ class Plugin extends BasePlugin {
 	protected function init_hooks(): void {
 		parent::init_hooks();
 
-		add_action( 'wp_enqueue_scripts', [ self::class, 'scripts' ] );
+		add_action( 'wp_enqueue_scripts', [ self::class, 'assets' ] );
 	}
 
-	public static function scripts(): void {
-		if( true !== apply_filters( 'events_calendar_ical_load_assets', true ) ) {
+	public static function assets(): void {
+		// Give user the option of disabling assets.
+		if ( true !== apply_filters( 'events_calendar_ical_load_assets', true ) ) {
 			return;
 		}
 
 		if ( ! wp_script_is( 'alpinejs', 'registered' ) ) {
-			wp_register_script( 'alpinejs',  self::get_assets_url('scripts/alpinejs.js'), [], '3.5.1', true );
+			wp_register_script( 'alpinejs', self::get_assets_url( 'scripts/dist/alpinejs.js' ), [], '3.5.1', true );
 		}
 
-		wp_enqueue_script( 'alpinejs' );
+		wp_register_script( 'ecif-main', self::get_assets_url( 'scripts/dist/ical-feed.js' ), [ 'alpinejs' ], self::get_version(), true );
+		wp_register_style( 'ecif-main', self::get_assets_url( 'styles/ical-feed.css' ), [], self::get_version(), 'screen' );
+
+		// Only enqueue where we need it.
+		if ( is_post_type_archive( 'tribe_events' ) || is_singular( 'tribe_events' ) ) {
+			wp_enqueue_script( 'alpinejs' );
+			wp_enqueue_script( 'ecif-main' );
+			wp_enqueue_style( 'ecif-main' );
+		}
 	}
 
 }
