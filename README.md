@@ -15,6 +15,10 @@ You can install this package via composer.
 composer require bernskioldmedia/events-calendar-ical-feeds
 ```
 
+You can also install this package by grabbing the built ZIP file from the [releases page](https://github.com/bernskioldmedia/events-calendar-ical-feeds/releases) and uploading it to your plugins folder.
+
+The plugin will update through the core WordPress plugin updater.
+
 ## Usage
 
 The feed URL is based on the events slug in the settings of The Event Calendar.
