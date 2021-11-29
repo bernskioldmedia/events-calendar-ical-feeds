@@ -17,4 +17,23 @@ class Plugin extends BasePlugin {
 		Endpoints::class,
 		Calendar_Subscribe_Button::class,
 	];
+
+	protected function init_hooks(): void {
+		parent::init_hooks();
+
+		add_action( 'wp_enqueue_scripts', [ self::class, 'scripts' ] );
+	}
+
+	public static function scripts(): void {
+		if( true !== apply_filters( 'events_calendar_ical_load_assets', true ) ) {
+			return;
+		}
+
+		if ( ! wp_script_is( 'alpinejs', 'registered' ) ) {
+			wp_register_script( 'alpinejs',  self::get_assets_url('scripts/alpinejs.js'), [], '3.5.1', true );
+		}
+
+		wp_enqueue_script( 'alpinejs' );
+	}
+
 }
