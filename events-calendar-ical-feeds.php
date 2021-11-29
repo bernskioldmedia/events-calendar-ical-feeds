@@ -23,10 +23,6 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require __DIR__ . '/vendor/autoload.php';
 }
 
-if ( file_exists( WP_CONTENT_DIR . '/vendor/autoload.php' ) ) {
-	require_once WP_CONTENT_DIR . '/vendor/autoload.php';
-}
-
 /**
  * Basic Constants
  */
@@ -46,3 +42,9 @@ function events_calendar_ical_feeds() {
 }
 
 events_calendar_ical_feeds();
+
+/**
+ * Run update checker if not disabled.
+ */
+$updater = \ECIF_Vendor\Puc_v4_Factory::buildUpdateChecker( 'https://github.com/bernskioldmedia/events-calendar-ical-feeds', __FILE__, 'events-calendar-ical-feeds' );
+$updater->getVcsApi()->enableReleaseAssets();
