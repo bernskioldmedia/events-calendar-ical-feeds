@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: iCalendar Feeds for The Events Calendar\n"
-"POT-Creation-Date: 2021-11-23 14:27+0100\n"
+"POT-Creation-Date: 2021-11-29 16:17+0100\n"
 "PO-Revision-Date: 2021-10-04 22:03+0200\n"
 "Last-Translator: Erik Bernskiold <erik@bernskioldmedia.com>\n"
 "Language-Team: Erik Bernskiold <erik@bernskioldmedia.com>\n"
@@ -45,12 +45,87 @@ msgctxt "CategoryName at SiteName"
 msgid "%2$s at %1$s"
 msgstr ""
 
-#: views/subscribe-button.php:11
+#: vendor_prefixed/bernskioldmedia/wp-plugin-base/src/Jobs/Job.php:366
+#: vendor_prefixed/bernskioldmedia/wp-plugin-base/src/Jobs/WP_Background_Process.php:366
+#, php-format
+msgid "Every %d Minutes"
+msgstr ""
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:55
+msgid "View details"
+msgstr ""
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:70
+#, php-format
+msgid "More information about %s"
+msgstr ""
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:106
+msgid "Check for updates"
+msgstr ""
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:171
+#, php-format
+msgctxt "the plugin title"
+msgid "The %s plugin is up to date."
+msgstr ""
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:174
+#, php-format
+msgctxt "the plugin title"
+msgid "A new version of the %s plugin is available."
+msgstr ""
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:177
+#, php-format
+msgctxt "the plugin title"
+msgid "Could not determine if updates are available for %s."
+msgstr ""
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:182
+#, php-format
+msgid "Unknown update checker status \"%s\""
+msgstr ""
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Vcs/PluginUpdateChecker.php:80
+msgid "There is no changelog available."
+msgstr ""
+
+#: views/subscribe-button.php:12
 msgid "Subscribe to the calendar"
 msgstr ""
 
-#: views/subscribe-button.php:14
+#: views/subscribe-button.php:15
 msgid "Subscribe"
+msgstr ""
+
+#: views/subscribe-button.php:19
+msgid "Subscribe to calendar"
+msgstr ""
+
+#: views/subscribe-button.php:20
+msgid ""
+"You can subscribe to the calendar in your calendar application such as\n"
+"\t\t\t<a href=\"https://support.google.com/calendar/answer/37100?"
+"hl=en&co=GENIE.Platform%3DDesktop\" title=\"How to subscribe to a public "
+"calendar in Google Calendar\" target=\"_blank\">Google Calendar</a> or\n"
+"\t\t\t<a href=\"https://support.microsoft.com/en-us/office/import-or-"
+"subscribe-to-a-calendar-in-outlook-on-the-"
+"web-503ffaf6-7b86-44fe-8dd6-8099d95f38df\" title=\"How to subscribe to a "
+"calendar in Outlook on the web\" target=\"_blank\">Outlook</a> and get "
+"updates automatically."
+msgstr ""
+
+#: views/subscribe-button.php:24
+msgid "When asked, you will need to provide the following URL:"
+msgstr ""
+
+#: views/subscribe-button.php:27
+msgid "Copy"
+msgstr ""
+
+#: views/subscribe-button.php:30
+msgid "Copied!"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

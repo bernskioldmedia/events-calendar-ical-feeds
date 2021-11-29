@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: iCalendar Feeds for The Events Calendar\n"
-"POT-Creation-Date: 2021-11-23 14:27+0100\n"
-"PO-Revision-Date: 2021-11-23 14:34+0100\n"
+"POT-Creation-Date: 2021-11-29 16:17+0100\n"
+"PO-Revision-Date: 2021-11-29 16:21+0100\n"
 "Last-Translator: Erik Bernskiold <erik@bernskioldmedia.com>\n"
 "Language-Team: Erik Bernskiold <erik@bernskioldmedia.com>\n"
 "Language: it_IT\n"
@@ -45,13 +45,98 @@ msgctxt "CategoryName at SiteName"
 msgid "%2$s at %1$s"
 msgstr "%2$s a %1$s"
 
-#: views/subscribe-button.php:11
+#: vendor_prefixed/bernskioldmedia/wp-plugin-base/src/Jobs/Job.php:366
+#: vendor_prefixed/bernskioldmedia/wp-plugin-base/src/Jobs/WP_Background_Process.php:366
+#, php-format
+msgid "Every %d Minutes"
+msgstr "Ogni %d minuti"
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:55
+msgid "View details"
+msgstr "Vedi dettagli"
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:70
+#, php-format
+msgid "More information about %s"
+msgstr "Più informazioni su %s"
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:106
+msgid "Check for updates"
+msgstr "Controlla gli aggiornamenti"
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:171
+#, php-format
+msgctxt "the plugin title"
+msgid "The %s plugin is up to date."
+msgstr "Il plugin %s è aggiornato."
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:174
+#, php-format
+msgctxt "the plugin title"
+msgid "A new version of the %s plugin is available."
+msgstr "È disponibile una nuova versione del plugin %s."
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:177
+#, php-format
+msgctxt "the plugin title"
+msgid "Could not determine if updates are available for %s."
+msgstr ""
+"Non è stato possibile determinare se è disponibile un aggiornamento di %s."
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:182
+#, php-format
+msgid "Unknown update checker status \"%s\""
+msgstr "Aggiornamento sconosciuto stato checker \"%s\""
+
+#: vendor_prefixed/yahnis-elsts/plugin-update-checker/Puc/v4p11/Vcs/PluginUpdateChecker.php:80
+msgid "There is no changelog available."
+msgstr "La cronologia degli aggiornamenti non è disponibile."
+
+#: views/subscribe-button.php:12
 msgid "Subscribe to the calendar"
 msgstr "Iscriviti al calendario"
 
-#: views/subscribe-button.php:14
+#: views/subscribe-button.php:15
 msgid "Subscribe"
 msgstr "Iscriviti"
+
+#: views/subscribe-button.php:19
+msgid "Subscribe to calendar"
+msgstr "Iscriviti al calendario"
+
+#: views/subscribe-button.php:20
+msgid ""
+"You can subscribe to the calendar in your calendar application such as\n"
+"\t\t\t<a href=\"https://support.google.com/calendar/answer/37100?"
+"hl=en&co=GENIE.Platform%3DDesktop\" title=\"How to subscribe to a public "
+"calendar in Google Calendar\" target=\"_blank\">Google Calendar</a> or\n"
+"\t\t\t<a href=\"https://support.microsoft.com/en-us/office/import-or-"
+"subscribe-to-a-calendar-in-outlook-on-the-"
+"web-503ffaf6-7b86-44fe-8dd6-8099d95f38df\" title=\"How to subscribe to a "
+"calendar in Outlook on the web\" target=\"_blank\">Outlook</a> and get "
+"updates automatically."
+msgstr ""
+"Puoi iscriverti al calendario nella tua applicazione calendario come\n"
+"\t\t\t<a href=\"https://support.google.com/calendar/answer/37100?"
+"hl=en&co=GENIE.Platform%3DDesktop\" title=\"How to subscribe to a public "
+"calendar in Google Calendar\" target=\"_blank\">Google Calendar</a> o\n"
+"\t\t\t<a href=\"https://support.microsoft.com/en-us/office/import-or-"
+"subscribe-to-a-calendar-in-outlook-on-the-"
+"web-503ffaf6-7b86-44fe-8dd6-8099d95f38df\" title=\"How to subscribe to a "
+"calendar in Outlook on the web\" target=\"_blank\">Outlook</a> e ricevere "
+"automaticamente gli aggiornamenti."
+
+#: views/subscribe-button.php:24
+msgid "When asked, you will need to provide the following URL:"
+msgstr "Quando vi verrà chiesto, dovrete fornire il seguente URL:"
+
+#: views/subscribe-button.php:27
+msgid "Copy"
+msgstr "Copia"
+
+#: views/subscribe-button.php:30
+msgid "Copied!"
+msgstr "Copiato!"
 
 #. Plugin Name of the plugin/theme
 msgid "iCalendar Feeds for The Events Calendar"
