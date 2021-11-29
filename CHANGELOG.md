@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.1.1 - 2021-11-29
+
+The release script didn't build the package properly, nor did we remember to bump the versions. Sorry!
+
 ## 1.1.0 - 2021-11-29
 
 ## Added
