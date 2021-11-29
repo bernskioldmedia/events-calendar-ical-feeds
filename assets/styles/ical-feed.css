@@ -1,0 +1,79 @@
+.ecif-subscription {
+	--eicf-border-color: #ccc;
+	--eifc-background-color: #fff;
+	--eifc-secondary-color: #f9f9f9;
+}
+
+.ecif-subscription .ecif-subscription-info {
+	margin-top: 1rem;
+	max-width: 30rem;
+	width: 100%;
+	margin-left: auto;
+	margin-right: 0;
+	text-align: left;
+	border: 1px solid var(--eicf-border-color);
+	padding: 1.5rem;
+	border-radius: 6px;
+	background-color: var(--eifc-background-color);
+	position: relative;
+}
+
+.ecif-subscription .ecif-subscription-info p {
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+.ecif-subscription .ecif-subscription-info a {
+	text-decoration: underline;
+}
+
+.ecif-subscription p.ecif-subscription-info__title {
+	font-weight: bold;
+	font-size: 1rem;
+	margin-bottom: 0.25rem;
+}
+
+.ecif-subscription .ecif-subscription-info__actions {
+	margin-top: 1rem;
+	display: flex;
+	flex-flow: row;
+	gap: 1.5rem;
+	background-color: var(--eifc-secondary-color);
+	border-radius: 999rem;
+	justify-content: space-between;
+	padding: 0.75rem 1rem;
+	margin-bottom: 1rem;
+}
+
+.ecif-subscription .ecif-subscription-info__url {
+	width: 100%;
+	border: none;
+	appearance: none;
+	background: transparent;
+	outline: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0.95rem;
+}
+
+.ecif-subscription-info__copy {}
+
+.ecif-subscription-info__copy:hover,
+.ecif-subscription-info__copy:focus {
+	text-decoration: underline;
+}
+
+.ecif-subscription p.ecif-subscription-info__copied {
+	text-align: right;
+	font-size: 0.9rem;
+	max-height: 0;
+	overflow: hidden;
+	transition: 0.05s ease-in max-height;
+	position: absolute;
+	bottom: 0;
+	right: 2.5rem;
+}
+
+.ecif-subscription p.ecif-subscription-info__copied.is-active {
+	max-height: 2rem;
+}

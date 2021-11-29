@@ -14,8 +14,6 @@ You can install this package via composer.
 ```bash
 composer require bernskioldmedia/events-calendar-ical-feeds
 ```
-### Dependencies
-The subscription UI require Alpine JS 3 to be enqueued.
 
 ## Usage
 
@@ -153,3 +151,19 @@ add_action( 'events_calendar_ical_event_from_id', function( \Spatie\IcalendarGen
 });
 ```
 
+### Preventing asset loading
+
+If you don't want this plugin to load its own assets (see below), you can prevent it by returning false from this filter. It returns true by default.
+
+```php
+// Prevent Events Calendar iCal Feeds from loading assets.
+add_action( 'events_calendar_ical_load_assets', '__return_false' );
+```
+
+## Assets
+
+This plugin requires [Alpine.js](https://alpinejs.dev) for a few frontend operations. Because Alpine.js is something that you might already be running, or have across many projects, we try to be nice when checking for it.
+
+We load it by checking if the handle `alpinejs` is already registered. If it is, we won't touch it. Just enqueue it. If it isn't, we'll register and enqueue.
+
+To completely disable loading of assets, see "Preventing asset loading" above.
