@@ -11,7 +11,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Build Project
         run: |
-          composer run release
+          composer install --no-dev -o
+          composer run build
           mkdir build
           mkdir ${{ github.event.repository.name}}
           rsync -rv . ${{ github.event.repository.name}} --exclude=${{ github.event.repository.name}} --exclude .git/ --exclude ".*" --exclude assets/scripts/src/ --exclude composer.json --exclude composer.lock --exclude build/ --exclude config/ --exclude CHANGELOG.md --exclude README.md
