@@ -14,7 +14,7 @@ jobs:
           composer run release
           mkdir build
           mkdir ${{ github.event.repository.name}}
-          rsync -rv . ${{ github.event.repository.name}} --exclude=${{ github.event.repository.name}} --exclude .git/ --exclude node_modules/ --exclude ".*" --exclude assets/styles/src/ --exclude composer.json --exclude composer.lock --exclude build/ --exclude config/ --exclude CHANGELOG.md --exclude README.md --exclude webpack.mix.js --exclude package.json --exclude package-lock.json --exclude phpstan.neon --exclude mix-manifest.json
+          rsync -rv . ${{ github.event.repository.name}} --exclude=${{ github.event.repository.name}} --exclude .git/ --exclude ".*" --exclude assets/scripts/src/ --exclude composer.json --exclude composer.lock --exclude build/ --exclude config/ --exclude CHANGELOG.md --exclude README.md
       - name: Create Artifact
         uses: montudor/action-zip@v0.1.0
         with:
