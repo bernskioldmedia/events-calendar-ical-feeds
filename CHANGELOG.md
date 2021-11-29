@@ -13,13 +13,6 @@ All notable changes to this project will be documented in this file. This projec
 
 - Check dependency against free version ([#3](https://github.com/bernskioldmedia/bm-wp-experience/pull/3))
 
-## [Unreleased]
-
-### Added
-
-- Replacing Events Calendar Export button with a Subscribe button to give the user a link to the feed
-- Function to get the feed url
-
 ## [1.0.2] - 2021-11-18
 
 ### Fixed
