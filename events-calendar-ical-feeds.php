@@ -35,8 +35,8 @@ define( 'EVENTS_CALENDAR_ICAL_FEEDS_FILE_PATH', __FILE__ );
  */
 function events_calendar_ical_feeds() {
 	$pluginList = get_option( 'active_plugins' );
-	$plugin     = 'events-calendar-pro/events-calendar-pro.php';
-	if ( in_array( $plugin, $pluginList ) ) {
+	$plugin     = 'the-events-calendar/the-events-calendar.php';
+	if ( in_array( $plugin, $pluginList, true ) ) {
 		return Plugin::instance();
 	}
 }
