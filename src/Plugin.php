@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) || exit;
 class Plugin extends BasePlugin {
 
 	protected static string $slug             = 'events_calendar_ical_feeds';
-	protected static string $version          = '1.1.1';
+	protected static string $version          = '1.1.2';
 	protected static string $textdomain       = 'events-calendar-ical-feeds';
 	protected static string $plugin_file_path = EVENTS_CALENDAR_ICAL_FEEDS_FILE_PATH;
 
