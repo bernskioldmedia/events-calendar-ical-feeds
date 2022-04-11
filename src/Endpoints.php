@@ -3,7 +3,7 @@
 namespace BernskioldMedia\WP\EventsCalendarIcalFeeds;
 
 
-use BernskioldMedia\WP\PluginBase\Interfaces\Hookable;
+use ECIF_Vendor\BernskioldMedia\WP\PluginBase\Interfaces\Hookable;
 
 class Endpoints implements Hookable {
 
