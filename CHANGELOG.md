@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.2.0 - 2022-04-21
+
+## Added
+
+- add support to subscribe to a taxonomy specific feed from the calendar ([#8](https://github.com/bernskioldmedia/bm-wp-experience/pull/8))
+
 ## 1.1.2 - 2022-04-11
 
 ### Fixed
