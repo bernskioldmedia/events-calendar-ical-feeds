@@ -49,4 +49,21 @@ class Endpoints implements Hookable {
 		return home_url( self::get_events_slug().'/'.self::get_feed_slug() );
 	}
 
+	public static function get_prefiltered_feed_url(): string {
+
+		$url = self::get_feed_url();
+
+		if( is_tax('tribe_events_cat')) {
+			$url = add_query_arg('categories', get_queried_object_id(), $url);
+		}
+
+		if( is_tax('post_tag')) {
+			$url = add_query_arg('tags', get_queried_object_id(), $url);
+		}
+
+		$url = apply_filters( 'events_calendar_ical_feeds_prefiltered_url', $url  );
+
+		return esc_url($url);
+	}
+
 }
