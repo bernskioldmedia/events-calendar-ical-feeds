@@ -38,7 +38,7 @@ class Plugin extends BasePlugin {
 		wp_register_style( 'ecif-main', self::get_assets_url( 'styles/ical-feed.css' ), [], self::get_version(), 'screen' );
 
 		// Only enqueue where we need it.
-		if ( is_post_type_archive( 'tribe_events' ) || is_singular( 'tribe_events' ) ) {
+		if ( is_post_type_archive( 'tribe_events' ) || is_singular( 'tribe_events' ) || get_post_type() === 'tribe_organizer' || get_post_type() === 'tribe_venue'  ) {
 			wp_enqueue_script( 'alpinejs' );
 			wp_enqueue_script( 'ecif-main' );
 			wp_enqueue_style( 'ecif-main' );

@@ -24,6 +24,7 @@ class Calendar_Feed {
 	public ?int    $venue_id     = null;
 	public ?int    $organizer_id = null;
 	public array   $categories   = [];
+	public array   $tags   = [];
 
 	public const REFRESH_INTERVAL_IN_MINUTES = 60;
 	public const MAX_AMOUNT_OF_EVENTS        = 500;
@@ -62,6 +63,18 @@ class Calendar_Feed {
 				],
 			] );
 		}
+
+		if ( ! empty( $this->tags ) ) {
+			$query->set( 'tax_query', [
+				[
+					'taxonomy' => 'post_tags',
+					'field'    => 'term_id',
+					'terms'    => $this->tags,
+				],
+			] );
+		}
+
+		$query = apply_filters( 'events_calendar_ical_query', $query );
 
 		return $query;
 	}
@@ -102,6 +115,12 @@ class Calendar_Feed {
 		return $this;
 	}
 
+	public function tags( array $tags = [] ): self {
+		$this->tags = $tags;
+
+		return $this;
+	}
+
 	public function amount( int $amount ): self {
 		$max_amount = (int) apply_filters( 'events_calendar_ical_feeds_max_amount', self::MAX_AMOUNT_OF_EVENTS, $this );
 
@@ -136,7 +155,7 @@ class Calendar_Feed {
 		if ( $this->organizer_id ) {
 			$filters['organizer'] = $this->organizer_id;
 		}
-		
+
 		$filters['posts_per_page'] = $this->amount;
 
 		return $filters;
@@ -154,6 +173,11 @@ class Calendar_Feed {
 		if ( ! empty( $this->categories ) && count( $this->categories ) === 1 ) {
 			return sprintf( _x( '%2$s at %1$s', 'CategoryName at SiteName', 'events-calendar-ical-feeds' ), get_bloginfo( 'name' ),
 				get_term_field( 'name', $this->categories[0] ) );
+		}
+
+		if ( ! empty( $this->tags ) && count( $this->tags ) === 1 ) {
+			return sprintf( _x( '%2$s at %1$s', 'TagName at SiteName', 'events-calendar-ical-feeds' ), get_bloginfo( 'name' ),
+				get_term_field( 'name', $this->tags[0] ) );
 		}
 
 		return get_bloginfo( 'name' );

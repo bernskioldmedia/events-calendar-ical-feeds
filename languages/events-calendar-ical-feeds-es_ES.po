@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: iCalendar Feeds for The Events Calendar\n"
-"POT-Creation-Date: 2021-11-29 16:17+0100\n"
-"PO-Revision-Date: 2021-11-29 16:20+0100\n"
+"POT-Creation-Date: 2022-04-21 11:28+0200\n"
+"PO-Revision-Date: 2022-04-21 11:30+0200\n"
 "Last-Translator: Erik Bernskiold <erik@bernskioldmedia.com>\n"
 "Language-Team: Erik Bernskiold <erik@bernskioldmedia.com>\n"
 "Language: es_ES\n"
@@ -10,38 +10,44 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: events-calendar-ical-feeds.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: src/Calendar_Feed.php:36
+#: src/Calendar_Feed.php:37
 #, php-format
 msgid "Events from %s"
 msgstr "Eventos de %s"
 
-#: src/Calendar_Feed.php:147
+#: src/Calendar_Feed.php:166
 #, php-format
 msgctxt "VenueName in SiteName"
 msgid "%2$s in %1$s"
 msgstr "%2$s en %1$s"
 
-#: src/Calendar_Feed.php:151
+#: src/Calendar_Feed.php:170
 #, php-format
 msgctxt "OrganizerName for SiteName"
 msgid "%2$s for %1$s"
 msgstr "%2$s para %1$s"
 
-#: src/Calendar_Feed.php:155
+#: src/Calendar_Feed.php:174
 #, php-format
 msgctxt "CategoryName at SiteName"
+msgid "%2$s at %1$s"
+msgstr "%2$s en %1$s"
+
+#: src/Calendar_Feed.php:179
+#, php-format
+msgctxt "TagName at SiteName"
 msgid "%2$s at %1$s"
 msgstr "%2$s en %1$s"
 
@@ -122,18 +128,30 @@ msgstr ""
 "\t\t\t<a href=\"https://support.microsoft.com/en-us/office/import-or-"
 "subscribe-to-a-calendar-in-outlook-on-the-"
 "web-503ffaf6-7b86-44fe-8dd6-8099d95f38df\" title=\"How to subscribe to a "
-"calendar in Outlook on the web\" target=\"_blank\">Outlook</a> y recibir "
-"las actualizaciones automáticamente."
+"calendar in Outlook on the web\" target=\"_blank\">Outlook</a> y recibir las "
+"actualizaciones automáticamente."
 
 #: views/subscribe-button.php:24
-msgid "When asked, you will need to provide the following URL:"
-msgstr "Cuando se le pregunte, tendrá que proporcionar la siguiente URL:"
+msgid ""
+"When asked, you will need to provide the following URL to subscribe to all "
+"events:"
+msgstr ""
+"Cuando se le solicite, deberá proporcionar la siguiente URL para suscribirse "
+"a todos los eventos:"
 
-#: views/subscribe-button.php:27
+#: views/subscribe-button.php:27 views/subscribe-button.php:33
 msgid "Copy"
 msgstr "Copiar"
 
 #: views/subscribe-button.php:30
+msgid ""
+"Or, you can use the following URL to only show the events with your current "
+"filters:"
+msgstr ""
+"O bien, puede usar la siguiente URL para mostrar solo los eventos con sus "
+"filtros actuales:"
+
+#: views/subscribe-button.php:37
 msgid "Copied!"
 msgstr "Copiado!"
 
