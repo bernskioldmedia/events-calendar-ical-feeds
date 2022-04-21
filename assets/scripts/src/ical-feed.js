@@ -41,9 +41,16 @@ function copyTextToClipboard( text ) {
 	} );
 }
 
-const copyButton = document.querySelector( '.js-copy-tec-ical-feed-button' );
-const copyUrl = document.querySelector( '.js-copy-tec-ical-feed-url' );
+const copyAllButton = document.getElementById('js-copy-tec-ical-feed-all-button');
+const copyAllUrl = document.getElementById('js-copy-tec-ical-feed-all-url');
 
-copyButton.addEventListener( 'click', function( event ) {
-	copyTextToClipboard( copyUrl.innerHTML );
+const copyFilteredButton = document.getElementById('js-copy-tec-ical-feed-filtered-button');
+const copyFilteredUrl = document.getElementById('js-copy-tec-ical-feed-filtered-url');
+
+copyAllButton.addEventListener( 'click', function( event ) {
+	copyTextToClipboard( copyAllUrl.innerHTML );
+} );
+
+copyFilteredButton.addEventListener( 'click', function( event ) {
+	copyTextToClipboard( copyFilteredUrl.innerHTML );
 } );
