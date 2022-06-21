@@ -47,10 +47,14 @@ const copyAllUrl = document.getElementById('js-copy-tec-ical-feed-all-url');
 const copyFilteredButton = document.getElementById('js-copy-tec-ical-feed-filtered-button');
 const copyFilteredUrl = document.getElementById('js-copy-tec-ical-feed-filtered-url');
 
-copyAllButton.addEventListener( 'click', function( event ) {
-	copyTextToClipboard( copyAllUrl.innerHTML );
-} );
+if (copyAllButton) {
+	copyAllButton.addEventListener('click', function (event) {
+		copyTextToClipboard(copyAllUrl.value);
+	});
+}
 
-copyFilteredButton.addEventListener( 'click', function( event ) {
-	copyTextToClipboard( copyFilteredUrl.innerHTML );
-} );
+if (copyFilteredButton) {
+	copyFilteredButton.addEventListener('click', function (event) {
+		copyTextToClipboard(copyFilteredUrl.value);
+	});
+}
