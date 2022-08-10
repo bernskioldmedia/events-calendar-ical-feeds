@@ -32,7 +32,7 @@ jobs:
                   include: 'src/Plugin\.php'
             
             - name: Build
-              run: composer install --no-dev -o && composer run build
+              run: composer run release
               
             - name: Commit
               uses: stefanzweifel/git-auto-commit-action@v4
