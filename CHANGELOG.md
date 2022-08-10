@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.2.4 - 2022-08-10
+
+### What's Changed
+
+- Bump actions/checkout from 2 to 3 by @dependabot in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/11
+- Bump actions/upload-artifact from 2 to 3 by @dependabot in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/10
+- Bump montudor/action-zip from 0.1.0 to 1 by @dependabot in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/9
+- Upgrade NPM packages (automated) by @github-actions in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/12
+- fixes issue with missing function when activating a new user by @annlickander in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/13
+
+### New Contributors
+
+- @dependabot made their first contribution in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/11
+- @github-actions made their first contribution in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/12
+
+**Full Changelog**: https://github.com/bernskioldmedia/events-calendar-ical-feeds/compare/1.2.3...1.2.4
+
 ## 1.2.3 - 2022-06-22
 
 ### Changed
