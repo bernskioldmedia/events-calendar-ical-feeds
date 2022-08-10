@@ -14,9 +14,16 @@ class Endpoints implements Hookable {
 	}
 
 	protected static function get_events_slug(): string{
-		$slug      = tribe_get_option( 'eventsSlug' );
 
-		if ( empty( $slug ) ) {
+		if( function_exists( 'tribe_get_option' ) ) {
+
+			$slug      = tribe_get_option( 'eventsSlug' );
+
+			if ( empty( $slug ) ) {
+				$slug = 'calendar';
+			}
+
+		} else {
 			$slug = 'calendar';
 		}
 
