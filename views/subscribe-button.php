@@ -27,7 +27,13 @@
 			<button id="js-copy-tec-ical-feed-all-button" class="js-copy-tec-ical-feed-button ecif-subscription-info__copy"><?php esc_html_e( 'Copy', 'events-calendar-ical-feeds' ); ?></button>
 		</div>
 		<?php if( \BernskioldMedia\WP\EventsCalendarIcalFeeds\Endpoints::get_feed_url() !== \BernskioldMedia\WP\EventsCalendarIcalFeeds\Endpoints::get_prefiltered_feed_url()) : ?>
-			<p><?php esc_html_e( 'Or, you can use the following URL to only show the events with your current filters:', 'events-calendar-ical-feeds' ); ?></p>
+			<?php
+				$type = __('category', 'events-calendar-ical-feeds');
+				if ( is_tax('post_tag') ) {
+					$type = $type = __('tag', 'events-calendar-ical-feeds');
+				}
+			?>
+			<p><?php sprintf(esc_html__( 'Or, you can use the following URL to only show the events with your current %s:', 'events-calendar-ical-feeds' ), $type ); ?></p>
 			<div class="ecif-subscription-info__actions">
 				<input id="js-copy-tec-ical-feed-filtered-url" class="js-copy-tec-ical-feed-url ecif-subscription-info__url" readonly value="<?php echo esc_attr( \BernskioldMedia\WP\EventsCalendarIcalFeeds\Endpoints::get_prefiltered_feed_url() ); ?>" />
 				<button id="js-copy-tec-ical-feed-filtered-button" class="js-copy-tec-ical-feed-button ecif-subscription-info__copy"><?php esc_html_e( 'Copy', 'events-calendar-ical-feeds' ); ?></button>
