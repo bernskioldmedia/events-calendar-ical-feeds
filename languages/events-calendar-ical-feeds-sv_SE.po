@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: iCalendar Feeds for The Events Calendar\n"
-"POT-Creation-Date: 2022-04-21 11:28+0200\n"
-"PO-Revision-Date: 2022-04-21 11:29+0200\n"
+"POT-Creation-Date: 2024-02-21 10:31+0100\n"
+"PO-Revision-Date: 2024-02-21 10:32+0100\n"
 "Last-Translator: Erik Bernskiold <erik@bernskioldmedia.com>\n"
 "Language-Team: Erik Bernskiold <erik@bernskioldmedia.com>\n"
 "Language: sv_SE\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: events-calendar-ical-feeds.php\n"
@@ -140,19 +140,28 @@ msgstr ""
 "När du blir tillfrågad måste du ange följande URL för att prenumerera på "
 "alla händelser:"
 
-#: views/subscribe-button.php:27 views/subscribe-button.php:33
+#: views/subscribe-button.php:27 views/subscribe-button.php:39
 msgid "Copy"
 msgstr "Kopiera"
 
-#: views/subscribe-button.php:30
+#: views/subscribe-button.php:31
+msgid "category"
+msgstr "Kategori"
+
+#: views/subscribe-button.php:33
+msgid "tag"
+msgstr "etikett"
+
+#: views/subscribe-button.php:36
+#, php-format
 msgid ""
 "Or, you can use the following URL to only show the events with your current "
-"filters:"
+"%s:"
 msgstr ""
-"Du kan också använda följande URL för att bara visa händelserna med dina "
-"aktuella filter:"
+"Du kan också använda följande URL för att bara visa händelserna med din "
+"aktuella %s:"
 
-#: views/subscribe-button.php:37
+#: views/subscribe-button.php:43
 msgid "Copied!"
 msgstr "Kopierad!"
 
