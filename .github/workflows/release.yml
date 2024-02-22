@@ -35,7 +35,7 @@ jobs:
               run: composer run release
               
             - name: Commit
-              uses: stefanzweifel/git-auto-commit-action@v4
+              uses: stefanzweifel/git-auto-commit-action@v5
               with:
                   branch: main
                   commit_message: "Prepare release ${{ github.event.inputs.versionName }}"
