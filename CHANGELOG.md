@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.2.5 - 2024-02-26
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 1.3.3 to 1.3.4 by @dependabot in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/14
+* Bump dependabot/fetch-metadata from 1.3.4 to 1.3.5 by @dependabot in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/15
+* Bump dependabot/fetch-metadata from 1.3.5 to 1.3.6 by @dependabot in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/16
+* Bump dependabot/fetch-metadata from 1.3.6 to 1.4.0 by @dependabot in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/18
+* Bump dependabot/fetch-metadata from 1.4.0 to 1.5.1 by @dependabot in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/19
+* Bump dependabot/fetch-metadata from 1.5.1 to 1.6.0 by @dependabot in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/20
+* Bump actions/checkout from 3 to 4 by @dependabot in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/21
+* Bump peter-evans/create-pull-request from 4 to 5 by @dependabot in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/17
+* Change text when subscribing on a category page by @annlickander in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/25
+* Bump stefanzweifel/git-auto-commit-action from 4 to 5 by @dependabot in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/22
+* Bump actions/setup-node from 3 to 4 by @dependabot in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/23
+* Bump actions/upload-artifact from 3 to 4 by @dependabot in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/24
+
+**Full Changelog**: https://github.com/bernskioldmedia/events-calendar-ical-feeds/compare/1.2.4...1.2.5
+
 ## 1.2.4 - 2022-08-10
 
 ### What's Changed
