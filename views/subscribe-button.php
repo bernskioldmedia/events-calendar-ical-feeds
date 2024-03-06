@@ -33,7 +33,7 @@
 					$type = $type = __('tag', 'events-calendar-ical-feeds');
 				}
 			?>
-			<p><?php sprintf(esc_html__( 'Or, you can use the following URL to only show the events with your current %s:', 'events-calendar-ical-feeds' ), $type ); ?></p>
+			<p><?php echo sprintf(esc_html__( 'Or, you can use the following URL to only show the events with your current %s:', 'events-calendar-ical-feeds' ), $type ); ?></p>
 			<div class="ecif-subscription-info__actions">
 				<input id="js-copy-tec-ical-feed-filtered-url" class="js-copy-tec-ical-feed-url ecif-subscription-info__url" readonly value="<?php echo esc_attr( \BernskioldMedia\WP\EventsCalendarIcalFeeds\Endpoints::get_prefiltered_feed_url() ); ?>" />
 				<button id="js-copy-tec-ical-feed-filtered-button" class="js-copy-tec-ical-feed-button ecif-subscription-info__copy"><?php esc_html_e( 'Copy', 'events-calendar-ical-feeds' ); ?></button>
