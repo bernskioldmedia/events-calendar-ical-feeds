@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.2.6 - 2024-03-06
+
+### What's Changed
+
+* Fix missing text for subscribe button by @annlickander in https://github.com/bernskioldmedia/events-calendar-ical-feeds/pull/27
+
+**Full Changelog**: https://github.com/bernskioldmedia/events-calendar-ical-feeds/compare/1.2.5...1.2.6
+
 ## 1.2.5 - 2024-02-26
 
 ### What's Changed
