@@ -41,7 +41,7 @@ jobs:
                   commit_message: "Prepare release ${{ github.event.inputs.versionName }}"
                   
             - name: Release
-              uses: softprops/action-gh-release@v1
+              uses: softprops/action-gh-release@v2
               with:
                   draft: true
                   prerelease: false
